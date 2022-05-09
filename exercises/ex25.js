@@ -10,3 +10,34 @@ loopy([15, 90], [2, 5], ["Batty", "Beacon"]);
 
 The loopy function should log to the console all the numbers from 15 to 90, except replacing multiples of 2 with "Batty", multiples of 5 with "Beacon", and multiples of 2 and 5 with "BattyBeacon".
 */
+
+function loopy(range, multiples, words) {
+    let result;
+    let incr = 0;
+    
+    let i = range[0];
+    while ( (i <= range[1] && range[0] < range[1]) || (i >= range[1] && range[0] > range[1]) ) {
+        result = "";
+        if ( i % multiples[0] == 0 ) {
+            result = words[0];
+        }
+        if ( i % multiples[1] == 0) {
+            result += words[1];
+        }
+        if (result == "") {
+            console.log(i);
+        } else {
+            console.log(result);
+        }
+
+        if (range[0] > range[1]) {
+            i--;
+        } else {
+            i++;
+        }
+    }
+}
+
+
+// loopy([15, 90], [2, 5], ["Batty", "Beacon"]);
+loopy([10,1],[2,3],["Two","Three"]);

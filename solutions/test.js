@@ -49,6 +49,7 @@
 // }
 
 // hello();
+<<<<<<< Updated upstream
 
 // const hello = function () {
 //     console.log("hello");
@@ -64,4 +65,20 @@
 
 console.log("Bob" || " Marley");
 
+=======
 
+// const hello = function () {
+//     console.log("hello");
+// }
+
+
+let sum = 3 + 2;
+const doublesum = function(a,b) {
+    let sum = a + b;
+    return sum * 2;
+}
+>>>>>>> Stashed changes
+
+doublesum(5,4);
+
+console.log(sum);
